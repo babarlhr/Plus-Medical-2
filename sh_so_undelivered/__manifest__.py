@@ -6,7 +6,7 @@
     
     'website': 'https://www.softhealer.com',
     
-    'version': '12.0.1',
+    'version': '11.0.2',
     
     'category': 'Sales',
 
