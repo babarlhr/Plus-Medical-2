@@ -6,7 +6,9 @@
     
     'website': 'https://www.softhealer.com',
     
-    'version': '11.0.2',
+    'version': '11.0.3',
+    
+    'support': 'support@softhealer.com',
     
     'category': 'Sales',
 
