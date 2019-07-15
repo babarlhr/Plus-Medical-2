@@ -52,35 +52,14 @@
 					<field name="price_unit" string="Price"/>
 					<field name="tax_id" widget="many2many_tags" invisible="1"/>
 					<field name="discount" invisible="1"/>
-					<field name="price_subtotal" string="Amount"/>
+					<field name="price_subtotal" string="Amount" sum='Amount'/>
 					<field name="is_delivered" invisible="1"/>							
 				</tree>				
 			</field>
 		</record>
 
 
-        <record id="sh_so_undelivered_search_view_inherit" model="ir.ui.view">
-            <field name="name">Sale Order Line Search</field>
-            <field name="model">sale.order.line</field>
-            <field name="arch" type="xml">
-                <search string="Search Sales Order Line">
-                    <field name="order_partner_id" filter_domain="['|','|',('order_partner_id','ilike',self),('order_id','ilike',self),('product_id','ilike',self)]"/>
-                    <field name="order_id" string="Order"/>
-                    <field name="product_id"/>
-                    <field name="so_order_date"/>
-                    <field name="qty_delivered"/>
-                    <separator/>
-                    
-            		<filter string="Order Date" name="filter_order_date" date="so_order_date"/>
-                            
-                    <group expand="0" string="Group By">
-                        <filter name="group_by_order_partner_id" domain="[]" string="Customer" context="{'group_by':'order_partner_id'}"/>
-                        <filter name="group_by_order_id" domain="[]" string="Order" context="{'group_by':'order_id'}"/>
-                        <filter name="group_by_product_id" domain="[]" string="Product" context="{'group_by':'product_id'}"/>
-                    </group>
-                </search>
-            </field>
-        </record>
+     
 
 		<record id="action_sh_so_undelivered" model="ir.actions.act_window">
 			<field name="name">Sale Order Line</field>
