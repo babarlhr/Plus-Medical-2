@@ -4,7 +4,7 @@
 	    
 	    <record id="group_forecast_sale_ept" model="res.groups">
 	    	<field name="name">Manage Forecast Sales</field>
-	    	<field name="implied_ids" eval="[(4,ref('stock.group_stock_user')),(4,ref('base.user_root')),(4,ref('base.user_admin'))]"/>
+	    	<field name="implied_ids" eval="[(4,ref('stock.group_stock_user'))]"/>
 	    	<field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
 	    </record>
 	    
